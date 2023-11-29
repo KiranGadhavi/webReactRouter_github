@@ -14,8 +14,19 @@ function Github() {
     // }, [])
 
   return (
-    <div className='text-center m-4 bg-gray-600 text-white p-4 text-3xl'>Github followers: {data.followers}
-    <img src={data.avatar_url} alt="Git picture" width={300} />
+    <div className='flex m-4 bg-gray-500 text-white p-4 text-2xl'>
+   
+   <div className='flex-col flex-wrap  '>
+   <img src={data.avatar_url} alt="Git picture" width={300} />
+   </div> 
+   <div className=' flex-col flex-wrap px-9 pt-5'>
+   <div className='mix-blend-plus-lighter font-bold text-3xl pb-4 text-orange-500 underline'>Github Details</div>
+   <label>Name : <span>{data.login}</span></label>
+   <div><label>location : <span >{data.location}</span> </label> </div>
+   <div><label>followers : <span >{data.followers}</span></label>  </div>
+    <div><label>Publicrepos : <span >{data.public_repos}</span></label></div>
+    <div><label>Updated : <span >{data.updated_at}</span></label></div>   
+   </div>
     </div>
   )
 }
